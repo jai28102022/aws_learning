@@ -6,7 +6,7 @@ def load_csv():
     file = open(filename)
     data = csv.DictReader(file, delimiter=',')
     for x1 in data:
-        create_instance(x1.get("name"), x1.get("type"), x1.get("pkg"))
+        create_instance(x1.get("instance-name"), x1.get("instance-type"))
     file.close()
 
 def create_instance(instance_name, instance_type,pkg):
