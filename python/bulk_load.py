@@ -4,7 +4,7 @@ import boto3
 def load_csv():
     filename = "instances-demo.csv"
     file = open(filename)
-    data = csv.DictReader(file, delimiter=';')
+    data = csv.DictReader(file, delimiter=',')
     for x1 in data:
         create_instance(x1.get("name"), x1.get("type"))
     file.close()
