@@ -14,7 +14,7 @@ def create_instance(instance_name, instance_type,pkg):
     if machine_name:
        ec2 = boto3.resource('ec2')
        userdata = """#!/bin/bash
-yum update
+apt update
 apt install {0} -y"""
        imageid = 'ami-024c319d5d14b463e'
        instancetype = instance_type
